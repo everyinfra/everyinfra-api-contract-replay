@@ -65,7 +65,7 @@ Exclusion does not authorize deletion. Local evidence remains available for revi
 - [x] Two final hash-constrained wheel builds are byte-identical; the project verifier checks all 12 members, RECORD values, source bytes, license bytes, identity and empty runtime dependency metadata.
 - [x] The final wheel installs into an isolated environment and the installed `redact` command succeeds without source-tree imports.
 - [x] Six exact build-tool versions returned no OSV records in the 2026-09-05 query sample; this is not a scan of Python, operating-system libraries or future environments.
-- [ ] Build and test the exact candidate on Linux and macOS CI.
+- [x] Build and test the exact candidate on Linux and macOS CI; [run 33941938098](https://github.com/everyinfra/everyinfra-api-contract-replay/actions/runs/33941938098) passed both jobs for root commit `0bc8dd5f3a8aa8f98d415c86ea27b9e247984c3a`.
 - [x] Prepared an allowlist-only 26-file copy; imports resolved from the copy, 13 tests and the synthetic demo passed, duplicate builds matched the source-tree wheel hash, and targeted absolute-path/private-key/token patterns were absent.
 - [x] Review the exact repository identity, 26 files and external publication action immediately before the 2026-09-05 public push.
 

@@ -1,5 +1,7 @@
 # EveryInfra API Contract Replay
 
+[![CI](https://github.com/everyinfra/everyinfra-api-contract-replay/actions/workflows/ci.yml/badge.svg)](https://github.com/everyinfra/everyinfra-api-contract-replay/actions/workflows/ci.yml)
+
 Offline API contract diff and replay checks for sanitized request and response fixtures.
 
 EveryInfra API Contract Replay turns synthetic or already-authorized, sanitized HTTP observations into deterministic structural contracts. It redacts credentials and contact fields, normalizes resource identifiers, compares field-level changes, and checks later fixtures for contract drift without sending a network request.
