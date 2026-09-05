@@ -43,11 +43,11 @@ jobs:
       - name: Verify wheel contents, license and reproducibility
         run: >-
           uv run --locked python scripts/verify_wheel.py
-          outputs/build-a/everyinfra_api_contract_replay-0.1.0.dev0-py3-none-any.whl
-          outputs/build-b/everyinfra_api_contract_replay-0.1.0.dev0-py3-none-any.whl
+          outputs/build-a/everyinfra_api_contract_replay-0.1.0-py3-none-any.whl
+          outputs/build-b/everyinfra_api_contract_replay-0.1.0-py3-none-any.whl
           --output outputs/wheel-verification.json
       - name: Install and invoke the built CLI
         run: |
           uv venv --python 3.12 outputs/install-env
-          uv pip install --python outputs/install-env/bin/python --no-deps outputs/build-a/everyinfra_api_contract_replay-0.1.0.dev0-py3-none-any.whl
+          uv pip install --python outputs/install-env/bin/python --no-deps outputs/build-a/everyinfra_api_contract_replay-0.1.0-py3-none-any.whl
           outputs/install-env/bin/everyinfra-contract --help
