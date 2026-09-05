@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "everyinfra-api-contract-replay"
+version = "0.1.0.dev0"
+description = "Offline API contract diff and replay checks for sanitized request and response fixtures."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "EveryInfra"}]
+dependencies = []
+keywords = [
+  "api-contract-testing",
+  "api-diff",
+  "fixture-replay",
+  "schema-diff",
+  "security-redaction"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Testing"
+]
+
+[project.scripts]
+everyinfra-contract = "everyinfra_contract_replay.cli:main"
+
+[project.urls]
+Homepage = "https://everyinfra.com"
+Documentation = "https://everyinfra.com/docs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/everyinfra_contract_replay"]
+
+[tool.uv]
+package = true
+build-constraint-dependencies = [
+  "hatchling==1.32.0",
+  "packaging==26.3",
+  "pathspec==1.1.1",
+  "pluggy==1.6.0",
+  "tomlkit==0.15.1",
+  "trove-classifiers==2026.6.1.19",
+]

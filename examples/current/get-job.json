@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "capture_id": "get-job-current",
+  "request": {
+    "method": "GET",
+    "url": "https://api.example.test/v1/jobs/job_987654?include=events&token=another-secret",
+    "headers": {
+      "Accept": "application/json",
+      "Authorization": "Bearer another-secret",
+      "X-Trace": "current-trace"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": {"Content-Type": "application/json"},
+    "body": {
+      "id": "job_987654",
+      "status": true,
+      "owner_email": "new-operator@example.test",
+      "result": {"records": 3},
+      "request_id": "req_987654"
+    }
+  }
+}

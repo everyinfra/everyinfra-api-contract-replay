@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "capture_id": "create-job-current",
+  "request": {
+    "method": "POST",
+    "url": "https://api.example.test/v1/jobs",
+    "headers": {
+      "Content-Type": "application/json",
+      "X-Api-Key": "another-secret"
+    },
+    "body": {
+      "source_url": "https://docs.example.test/next",
+      "api_key": "another-secret",
+      "notify_email": "new-operator@example.test",
+      "limits": {"max_pages": 3}
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {"Content-Type": "application/json"},
+    "body": {"id": "job_987654", "status": "queued", "request_id": "req_987654"}
+  }
+}

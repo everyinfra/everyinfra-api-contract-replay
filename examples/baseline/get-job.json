@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "capture_id": "get-job-success",
+  "request": {
+    "method": "GET",
+    "url": "https://api.example.test/v1/jobs/job_123456?include=events&token=synthetic-secret",
+    "headers": {
+      "Accept": "application/json",
+      "Authorization": "Bearer synthetic-secret",
+      "X-Trace": "public-trace"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Set-Cookie": "session=synthetic-secret"
+    },
+    "body": {
+      "id": "job_123456",
+      "status": "complete",
+      "owner_email": "operator@example.test",
+      "result": {
+        "records": 3,
+        "source": {"url": "https://docs.example.test/start"}
+      }
+    }
+  }
+}

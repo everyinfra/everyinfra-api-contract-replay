@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "capture_id": "create-job-success",
+  "request": {
+    "method": "POST",
+    "url": "https://api.example.test/v1/jobs",
+    "headers": {
+      "Content-Type": "application/json",
+      "X-Api-Key": "synthetic-secret"
+    },
+    "body": {
+      "source_url": "https://docs.example.test/start",
+      "api_key": "synthetic-secret",
+      "notify_email": "operator@example.test",
+      "limits": {"max_pages": 3}
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {"Content-Type": "application/json"},
+    "body": {"id": "job_123456", "status": "queued"}
+  }
+}
