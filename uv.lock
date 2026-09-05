@@ -14,5 +14,5 @@ build-constraints = [
 
 [[package]]
 name = "everyinfra-api-contract-replay"
-version = "0.1.0.dev0"
+version = "0.1.0"
 source = { editable = "." }
