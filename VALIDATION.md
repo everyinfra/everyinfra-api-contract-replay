@@ -18,7 +18,7 @@ These observations are evidence for the named local samples. They are not a clai
 
 The public repository is [`everyinfra/everyinfra-api-contract-replay`](https://github.com/everyinfra/everyinfra-api-contract-replay). Its root commit `0bc8dd5f3a8aa8f98d415c86ea27b9e247984c3a` contains exactly the 26 regular files in [PUBLIC_RELEASE.md](PUBLIC_RELEASE.md). [GitHub Actions run 33941938098](https://github.com/everyinfra/everyinfra-api-contract-replay/actions/runs/33941938098) completed successfully on both `ubuntu-latest` and `macos-latest`; each job restored the locked environment, ran the 13 offline tests and synthetic demonstration, built two wheels with hashed build constraints, verified their contents and reproducibility, and installed and invoked the built CLI.
 
-This hosted evidence covers that source commit and those two CI images. It is not a GitHub Release, package-registry publication, Windows test, deployment, long-duration run or production certification.
+This hosted evidence covers that source commit and those two CI images. GitHub Release state is verified separately; it is not package-registry publication, Windows testing, deployment, long-duration behavior or production certification.
 
 ## Reproduce the core checks
 
@@ -40,6 +40,6 @@ Every output file and demonstration directory must be new. The test suite and de
 - HAR, packet capture, streaming bodies, multipart forms, binary data or live HTTP replay
 - Contract requiredness, unobserved status codes, semantic value constraints or OpenAPI generation
 - Production workload, concurrency, long-duration or memory boundaries
-- A GitHub Release, package upload, deployment, search indexing, AI mention, citation, traffic or conversion outcome
+- A package-registry upload, deployment, search indexing, AI mention, citation, traffic or conversion outcome; GitHub Release state is verified separately
 
 See [SECURITY.md](SECURITY.md) for the input and data-sharing boundary, [THIRD_PARTY.md](THIRD_PARTY.md) for build-tool ownership, and [PUBLIC_RELEASE.md](PUBLIC_RELEASE.md) for the candidate source boundary.

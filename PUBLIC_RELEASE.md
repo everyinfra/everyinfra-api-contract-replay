@@ -69,4 +69,4 @@ Exclusion does not authorize deletion. Local evidence remains available for revi
 - [x] Prepared an allowlist-only 26-file copy; imports resolved from the copy, 13 tests and the synthetic demo passed, duplicate builds matched the source-tree wheel hash, and targeted absolute-path/private-key/token patterns were absent.
 - [x] Review the exact repository identity, 26 files and external publication action immediately before the 2026-09-05 public push.
 
-This manifest does not itself authorize external actions. Repository creation and the exact 26-file source push were approved separately; a GitHub Release, PyPI upload, deployment, organization-profile change or outbound message remains a separate action.
+This manifest does not itself prove external state. Repository creation, the exact source push, a GitHub Release, package-registry upload, deployment, organization-profile changes and outbound messages are verified as separate actions.
